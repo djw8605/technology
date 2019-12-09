@@ -14,7 +14,7 @@ jobs:
     - name: Build
       uses: djw8605/doc-ci-scripts@master
 
-    # Use Derek's action for linkchecker checks
+    # Use Derek's action for linkchecker check
     - name: Verify Links
       uses: djw8605/linkchecker-action@master
       with:
