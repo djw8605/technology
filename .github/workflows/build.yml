@@ -11,8 +11,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Verify and Build
+    - name: Build
       uses: djw8605/doc-ci-scripts@master
+
+    - name: Verify Links
+      uses: djw8605/linkchecker-action
+      with:
+        site-dir: site
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
