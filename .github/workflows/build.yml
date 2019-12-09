@@ -15,7 +15,7 @@ jobs:
       uses: djw8605/doc-ci-scripts@master
 
     - name: Verify Links
-      uses: djw8605/linkchecker-action
+      uses: djw8605/linkchecker-action@master
       with:
         site-dir: site
 
