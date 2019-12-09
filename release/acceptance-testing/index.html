@@ -1,635 +1,2007 @@
+
+
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Acceptance Testing - OSG Technology Area</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
-  <link href="../../css/extra.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Acceptance Testing";
-    var mkdocs_page_input_path = "release/acceptance-testing.md";
-    var mkdocs_page_url = "/release/acceptance-testing/";
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> OSG Technology Area</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-  
-    <a class="" href="../..">Home</a>
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Software</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../software/development-process/">Development Process</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/koji-workflow/">Koji Workflow</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/new-team-member/">New Team Member</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/repository-management/">Repository Management</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/ce-test-scaling/">CE Scale Testing</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/rpm-development-guide/">RPM Development Guide</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/quilt/">Using Quilt</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/upcoming-to-main/">Upcoming to Main</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/software-support/">Software Support</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/effort-tracking/">Effort Tracking</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/release-planning/">Release Planning</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/globus-mass-update-procedure/">Globus Mass Update Procedure</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/git-software-development/">Git Software Development Process</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/osg-build-tools/">OSG Build Tools</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/resurrecting-epel-packages/">Resurrecting Epel Packages</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/koji-mass-rebuilds/">Koji Mass Rebuilds</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/create-vo-client/">Creating the VO Client Package</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/pki-overview/">PKI Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../software/ipv6-testing/">IPv6 Testing</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Release</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../cut-sw-release/">How to Cut a Release</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../cut-data-release/">How to Cut a Data Release</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../release-policy/">Release Policy</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../release-schedule/">Release Schedule</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../new-release-series/">New Release Series</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../old-release-removal/">Old Release Series Removal</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../itb-testing/">ITB Prerelease Testing</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../empty-pkgs/">Empty Packages</a>
-  
-        </li>
-        <li class=" current">
-          
-  
-    <a class="current" href="./">Acceptance Testing</a>
-  
-  <ul class="subnav">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-    <li class="toctree-l3"><a href="#acceptance-testing">Acceptance Testing</a></li>
+      
+        <link rel="canonical" href="https://opensciencegrid.github.io/technology/release/acceptance-testing/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
     
-        <ul>
-        
-            <li><a class="toctree-l4" href="#cvmfs">CVMFS</a></li>
-        
-            <li><a class="toctree-l4" href="#gratia-probe">Gratia Probe</a></li>
-        
-            <li><a class="toctree-l4" href="#gsi-openssh">GSI OpenSSH</a></li>
-        
-            <li><a class="toctree-l4" href="#htcondor-ce-collector-wip">HTCondor-CE Collector (WIP)</a></li>
-        
-            <li><a class="toctree-l4" href="#rsv">RSV</a></li>
-        
-            <li><a class="toctree-l4" href="#slurm">Slurm</a></li>
-        
-            <li><a class="toctree-l4" href="#vo-client">VO Client</a></li>
-        
-            <li><a class="toctree-l4" href="#voms-admin-server">VOMS Admin Server</a></li>
-        
-            <li><a class="toctree-l4" href="#xrootd-voms-testing">XRootD VOMS Testing</a></li>
-        
-            <li><a class="toctree-l4" href="#xrootd-plugins">XRootD Plugins</a></li>
-        
-        </ul>
     
-
-  </ul>
-        </li>
-  </ul>
-	    </li>
+      
+        <title>Acceptance Testing - OSG Technology Area</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#acceptance-testing" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://opensciencegrid.github.io/technology/" title="OSG Technology Area" class="md-header-nav__button md-logo">
           
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Policy</span>
-  <ul class="subnav">
-        <li class="">
+            <i class="md-icon"></i>
           
-  
-    <a class="" href="../../policy/gums-retire/">GUMS Retirement</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/bestman2-retire/">BeStMan2 Retirement</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/voms-admin-retire/">VOMS Admin Retirement</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/release-series/">Release Series Support</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/globus-toolkit/">Globus Toolkit Support</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/external-oasis-repos/">OASIS Repository Mirroring</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../policy/flexible-release-model/">Flexible Release Model</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Infrastructure</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../infrastructure/koji-restore-recipe/">Koji Restore Recipe</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../infrastructure/koji-hub-setup/">Koji-Hub Setup</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../infrastructure/koji-inf-overview/">Koji Infrastructure Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../infrastructure/koji-policy-writing/">Koji Policy Writing</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../infrastructure/madison-itb/">Madison ITB</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Documentation</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../documentation/writing-documentation/">Writing Documentation</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../documentation/reviewing-documentation/">Reviewing Documentation</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../documentation/style-guide/">Markdown Style Guide</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../documentation/markdown-migration/">Migrating Documents to Markdown</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Historical Information</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../infrastructure/koji-initial-install/">Koji Initial Install</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Historical Transitions</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../projects/sha2-support/">SHA-2 Support</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
-	    </li>
-          
-        </ul>
+        </a>
       </div>
-      &nbsp;
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                OSG Technology Area
+              </span>
+              <span class="md-header-nav__topic">
+                Acceptance Testing
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/opensciencegrid/technology/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://opensciencegrid.github.io/technology/" title="OSG Technology Area" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    OSG Technology Area
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/opensciencegrid/technology/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Software
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Software
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Packaging
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Packaging
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/rpm-development-guide/" title="RPM Development Guide" class="md-nav__link">
+      RPM Development Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/osg-build-tools/" title="OSG Build Tools" class="md-nav__link">
+      OSG Build Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/quilt/" title="Using Quilt" class="md-nav__link">
+      Using Quilt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/upcoming-to-main/" title="Upcoming to Main" class="md-nav__link">
+      Upcoming to Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/koji-workflow/" title="Koji Workflow" class="md-nav__link">
+      Koji Workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/create-vo-client/" title="Creating the VO Client Package" class="md-nav__link">
+      Creating the VO Client Package
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/repository-management/" title="Repository Management" class="md-nav__link">
+      Repository Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/globus-mass-update-procedure/" title="Globus Mass Update Procedure" class="md-nav__link">
+      Globus Mass Update Procedure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/resurrecting-epel-packages/" title="Resurrecting Epel Packages" class="md-nav__link">
+      Resurrecting Epel Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/koji-mass-rebuilds/" title="Koji Mass Rebuilds" class="md-nav__link">
+      Koji Mass Rebuilds
+    </a>
+  </li>
+
+        
+      </ul>
     </nav>
+  </li>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        
+          
+          
+          
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">OSG Technology Area</a>
-      </nav>
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/development-process/" title="Development Process" class="md-nav__link">
+      Development Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/git-software-development/" title="Git Software Development Process" class="md-nav__link">
+      Git Software Development Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/ce-test-scaling/" title="CE Scale Testing" class="md-nav__link">
+      CE Scale Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/ipv6-testing/" title="IPv6 Testing" class="md-nav__link">
+      IPv6 Testing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/software-support/" title="Software Support" class="md-nav__link">
+      Software Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/effort-tracking/" title="Effort Tracking" class="md-nav__link">
+      Effort Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/release-planning/" title="Release Planning" class="md-nav__link">
+      Release Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/new-team-member/" title="New Team Member" class="md-nav__link">
+      New Team Member
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Release
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Release
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-          <li>Release &raquo;</li>
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cut-sw-release/" title="How to Cut a Release" class="md-nav__link">
+      How to Cut a Release
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cut-data-release/" title="How to Cut a Data Release" class="md-nav__link">
+      How to Cut a Data Release
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../new-release-series/" title="New Release Series" class="md-nav__link">
+      New Release Series
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../old-release-removal/" title="Old Release Series Removal" class="md-nav__link">
+      Old Release Series Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../itb-testing/" title="ITB Prerelease Testing" class="md-nav__link">
+      ITB Prerelease Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../empty-pkgs/" title="Empty Packages" class="md-nav__link">
+      Empty Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
       
     
-    <li>Acceptance Testing</li>
-    <li class="wy-breadcrumbs-aside">
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Acceptance Testing
+      </label>
+    
+    <a href="./" title="Acceptance Testing" class="md-nav__link md-nav__link--active">
+      Acceptance Testing
+    </a>
+    
       
-        <a href="https://github.com/opensciencegrid/technology/edit/master/docs/release/acceptance-testing.md"
-          class="icon icon-github"> Edit on GitHub</a>
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
       
-    </li>
+        <li class="md-nav__item">
+  <a href="#cvmfs" title="CVMFS" class="md-nav__link">
+    CVMFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-cvmfs-repository-server-stratum-0" title="Creating a CVMFS Repository Server (Stratum 0)" class="md-nav__link">
+    Creating a CVMFS Repository Server (Stratum 0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-cvmfs-replica-server-stratum-1" title="Creating a CVMFS Replica Server (Stratum 1)" class="md-nav__link">
+    Creating a CVMFS Replica Server (Stratum 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-cvmfs-client" title="Creating a CVMFS client" class="md-nav__link">
+    Creating a CVMFS client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-oasis-client" title="Creating an OASIS client" class="md-nav__link">
+    Creating an OASIS client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-documentation" title="Additional Documentation" class="md-nav__link">
+    Additional Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gratia-probe" title="Gratia Probe" class="md-nav__link">
+    Gratia Probe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gsi-openssh" title="GSI OpenSSH" class="md-nav__link">
+    GSI OpenSSH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htcondor-ce-collector-wip" title="HTCondor-CE Collector (WIP)" class="md-nav__link">
+    HTCondor-CE Collector (WIP)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-collector" title="Setting Up the Collector" class="md-nav__link">
+    Setting Up the Collector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-ce" title="Setting Up the CE" class="md-nav__link">
+    Setting Up the CE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsv" title="RSV" class="md-nav__link">
+    RSV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm" title="Slurm" class="md-nav__link">
+    Slurm
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-and-setup" title="Installation and setup" class="md-nav__link">
+    Installation and setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-job-using-slurm" title="Running a job using slurm" class="md-nav__link">
+    Running a job using slurm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vo-client" title="VO Client" class="md-nav__link">
+    VO Client
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-voms-proxy-init" title="Testing voms-proxy-init" class="md-nav__link">
+    Testing voms-proxy-init
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xrootd-voms-testing" title="XRootD VOMS Testing" class="md-nav__link">
+    XRootD VOMS Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="HDFS" class="md-nav__link">
+    HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-name-node-installation" title="Hadoop name node installation" class="md-nav__link">
+    Hadoop name node installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-configuration" title="Edit Configuration" class="md-nav__link">
+    Edit Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-data-node-installation" title="Hadoop data node installation" class="md-nav__link">
+    Hadoop data node installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gridftp-installation" title="GridFTP installation" class="md-nav__link">
+    GridFTP installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-the-name-node" title="On the name node" class="md-nav__link">
+    On the name node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-the-name-node_1" title="On the name node" class="md-nav__link">
+    On the name node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xrootd-plugins" title="XRootD Plugins" class="md-nav__link">
+    XRootD Plugins
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Policy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Policy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/campus-cyberinfrastructure/" title="Campus Cyberinfrastructure" class="md-nav__link">
+      Campus Cyberinfrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/cream-support/" title="CREAM-CE Support" class="md-nav__link">
+      CREAM-CE Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/service-migrations-spring-2018/" title="Service Migrations - Spring 2018" class="md-nav__link">
+      Service Migrations - Spring 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/gums-retire/" title="GUMS Retirement" class="md-nav__link">
+      GUMS Retirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/bestman2-retire/" title="BeStMan2 Retirement" class="md-nav__link">
+      BeStMan2 Retirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/voms-admin-retire/" title="VOMS Admin Retirement" class="md-nav__link">
+      VOMS Admin Retirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/release-series/" title="Release Series Support" class="md-nav__link">
+      Release Series Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/globus-toolkit/" title="Globus Toolkit Support" class="md-nav__link">
+      Globus Toolkit Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/external-oasis-repos/" title="OASIS Repository Mirroring" class="md-nav__link">
+      OASIS Repository Mirroring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/flexible-release-model/" title="Flexible Release Model" class="md-nav__link">
+      Flexible Release Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/software-release/" title="Software Release Policy" class="md-nav__link">
+      Software Release Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/container-release/" title="Container Release Policy" class="md-nav__link">
+      Container Release Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../policy/community-testing/" title="Community Testing" class="md-nav__link">
+      Community Testing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/writing-documentation/" title="Writing Documentation" class="md-nav__link">
+      Writing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/reviewing-documentation/" title="Reviewing Documentation" class="md-nav__link">
+      Reviewing Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/style-guide/" title="Markdown Style Guide" class="md-nav__link">
+      Markdown Style Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/new-doc-area/" title="Creating a New Area" class="md-nav__link">
+      Creating a New Area
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Historical Transitions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Historical Transitions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/sha2-support/" title="SHA-2 Support" class="md-nav__link">
+      SHA-2 Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/markdown-migration/" title="Migrating Documents to Markdown" class="md-nav__link">
+      Migrating Documents to Markdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Meetings
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Meetings
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191202/" title="December, 2 2019" class="md-nav__link">
+      December, 2 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191125/" title="November, 25 2019" class="md-nav__link">
+      November, 25 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191118/" title="November, 18 2019" class="md-nav__link">
+      November, 18 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191111/" title="November, 11 2019" class="md-nav__link">
+      November, 11 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191104/" title="November, 4 2019" class="md-nav__link">
+      November, 4 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191028/" title="October, 28 2019" class="md-nav__link">
+      October, 28 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191021/" title="October, 21 2019" class="md-nav__link">
+      October, 21 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191014/" title="October, 14 2019" class="md-nav__link">
+      October, 14 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20191007/" title="October, 7 2019" class="md-nav__link">
+      October, 7 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190930/" title="September, 30 2019" class="md-nav__link">
+      September, 30 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190923/" title="September, 23 2019" class="md-nav__link">
+      September, 23 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190916/" title="September, 16 2019" class="md-nav__link">
+      September, 16 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190909/" title="September, 9 2019" class="md-nav__link">
+      September, 9 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190826/" title="August, 26 2019" class="md-nav__link">
+      August, 26 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190819/" title="August, 19 2019" class="md-nav__link">
+      August, 19 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190812/" title="August, 12 2019" class="md-nav__link">
+      August, 12 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190805/" title="August, 5 2019" class="md-nav__link">
+      August, 5 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190729/" title="July 29, 2019" class="md-nav__link">
+      July 29, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190722/" title="July 22, 2019" class="md-nav__link">
+      July 22, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190708/" title="July 8, 2019" class="md-nav__link">
+      July 8, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190701/" title="July 1, 2019" class="md-nav__link">
+      July 1, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190624/" title="June 24, 2019" class="md-nav__link">
+      June 24, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190617/" title="June 17, 2019" class="md-nav__link">
+      June 17, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190610/" title="June 10, 2019" class="md-nav__link">
+      June 10, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190603/" title="June 3, 2019" class="md-nav__link">
+      June 3, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190528/" title="May 28, 2019" class="md-nav__link">
+      May 28, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190513/" title="May 13, 2019" class="md-nav__link">
+      May 13, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190506/" title="May 6, 2019" class="md-nav__link">
+      May 6, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190429/" title="April 29, 2019" class="md-nav__link">
+      April 29, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190422/" title="April 22, 2019" class="md-nav__link">
+      April 22, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190415/" title="April 15, 2019" class="md-nav__link">
+      April 15, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190408/" title="April 8, 2019" class="md-nav__link">
+      April 8, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190401/" title="April 1, 2019" class="md-nav__link">
+      April 1, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190325/" title="March 25, 2019" class="md-nav__link">
+      March 25, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190311/" title="March 11, 2019" class="md-nav__link">
+      March 11, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190304/" title="March 4, 2019" class="md-nav__link">
+      March 4, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190225/" title="February 25, 2019" class="md-nav__link">
+      February 25, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190218/" title="February 18, 2019" class="md-nav__link">
+      February 18, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190211/" title="February 11, 2019" class="md-nav__link">
+      February 11, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190204/" title="February 4, 2019" class="md-nav__link">
+      February 4, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190128/" title="January 28, 2019" class="md-nav__link">
+      January 28, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190122/" title="January 22, 2019" class="md-nav__link">
+      January 22, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190114/" title="January 14, 2019" class="md-nav__link">
+      January 14, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../meetings/2019/TechArea20190107/" title="January 7, 2019" class="md-nav__link">
+      January 7, 2019
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cvmfs" title="CVMFS" class="md-nav__link">
+    CVMFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-cvmfs-repository-server-stratum-0" title="Creating a CVMFS Repository Server (Stratum 0)" class="md-nav__link">
+    Creating a CVMFS Repository Server (Stratum 0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-cvmfs-replica-server-stratum-1" title="Creating a CVMFS Replica Server (Stratum 1)" class="md-nav__link">
+    Creating a CVMFS Replica Server (Stratum 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-cvmfs-client" title="Creating a CVMFS client" class="md-nav__link">
+    Creating a CVMFS client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-oasis-client" title="Creating an OASIS client" class="md-nav__link">
+    Creating an OASIS client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-documentation" title="Additional Documentation" class="md-nav__link">
+    Additional Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gratia-probe" title="Gratia Probe" class="md-nav__link">
+    Gratia Probe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gsi-openssh" title="GSI OpenSSH" class="md-nav__link">
+    GSI OpenSSH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htcondor-ce-collector-wip" title="HTCondor-CE Collector (WIP)" class="md-nav__link">
+    HTCondor-CE Collector (WIP)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-collector" title="Setting Up the Collector" class="md-nav__link">
+    Setting Up the Collector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-ce" title="Setting Up the CE" class="md-nav__link">
+    Setting Up the CE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsv" title="RSV" class="md-nav__link">
+    RSV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm" title="Slurm" class="md-nav__link">
+    Slurm
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-and-setup" title="Installation and setup" class="md-nav__link">
+    Installation and setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-job-using-slurm" title="Running a job using slurm" class="md-nav__link">
+    Running a job using slurm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vo-client" title="VO Client" class="md-nav__link">
+    VO Client
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-voms-proxy-init" title="Testing voms-proxy-init" class="md-nav__link">
+    Testing voms-proxy-init
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xrootd-voms-testing" title="XRootD VOMS Testing" class="md-nav__link">
+    XRootD VOMS Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="HDFS" class="md-nav__link">
+    HDFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-name-node-installation" title="Hadoop name node installation" class="md-nav__link">
+    Hadoop name node installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-configuration" title="Edit Configuration" class="md-nav__link">
+    Edit Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-data-node-installation" title="Hadoop data node installation" class="md-nav__link">
+    Hadoop data node installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gridftp-installation" title="GridFTP installation" class="md-nav__link">
+    GridFTP installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-the-name-node" title="On the name node" class="md-nav__link">
+    On the name node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-the-name-node_1" title="On the name node" class="md-nav__link">
+    On the name node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xrootd-plugins" title="XRootD Plugins" class="md-nav__link">
+    XRootD Plugins
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/release/acceptance-testing.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
                 <h1 id="acceptance-testing">Acceptance Testing<a class="headerlink" href="#acceptance-testing" title="Permanent link">&para;</a></h1>
 <p>The OSG Release Team collects and maintains testing procedures for major components in the OSG Sofware Stack. These test should verify that basic functionality of the component works in typically deployed configurations.</p>
 <h2 id="cvmfs">CVMFS<a class="headerlink" href="#cvmfs" title="Permanent link">&para;</a></h2>
@@ -812,9 +2184,9 @@ KeepAlive On
 </li>
 <li>
 <p>Edit cvmfs configuration (<code>/etc/cvmfs/default.local</code>) to point to replica server.</p>
-<div class="codehilite"><pre><span></span><span class="n">CVMFS_SERVER_URL</span><span class="o">=</span><span class="s">&quot;http://10.128.3.97:8000/cvmfs/@fqrn@&quot;</span>
-<span class="n">CVMFS_REPOSITORIES</span><span class="o">=</span><span class="s">&quot;test.cvmfs-stratum-0.novalocal&quot;</span>
-<span class="n">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="n">DIRECT</span>
+<div class="codehilite"><pre><span></span>CVMFS_SERVER_URL=&quot;http://10.128.3.97:8000/cvmfs/@fqrn@&quot;
+CVMFS_REPOSITORIES=&quot;test.cvmfs-stratum-0.novalocal&quot;
+CVMFS_HTTP_PROXY=DIRECT
 </pre></div>
 
 
@@ -895,10 +2267,10 @@ KeepAlive On
 <h3 id="additional-documentation">Additional Documentation<a class="headerlink" href="#additional-documentation" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://cvmfs.readthedocs.io/en/stable/">CERN's CVMFS Documentation</a></li>
-<li><a href="https://opensciencegrid.github.io/docs/other/install-cvmfs-stratum1/">OSG's CVMFS Replica Server</a></li>
-<li><a href="https://opensciencegrid.github.io/docs/worker-node/install-cvmfs/">OSG's CVMFS Client Documentation</a></li>
+<li><a href="https://www.opensciencegrid.org/docs/other/install-cvmfs-stratum1/">OSG's CVMFS Replica Server</a></li>
+<li><a href="https://www.opensciencegrid.org/docs/worker-node/install-cvmfs/">OSG's CVMFS Client Documentation</a></li>
 <li>
-<p><a href="https://opensciencegrid.github.io/docs/data/external-oasis-repos/">OSG's OASIS Documentation</a></p>
+<p><a href="https://www.opensciencegrid.org/docs/data/external-oasis-repos/">OSG's OASIS Documentation</a></p>
 </li>
 <li>
 <p><a href="../bash_pi.sh">bash_pi.sh</a>: A bash script that uses a simple Monte Carlo method to estimate the value of Pi</p>
@@ -922,10 +2294,16 @@ KeepAlive On
 <li>Check <code>/var/lib/gratia/tmp/gratiafiles/</code> for a <code>subdir.condor_...</code> directory and verify that there are 200 xml jobs and the cpus/wall times are appropriate (either PT0S or PT1M).</li>
 </ul>
 <h2 id="gsi-openssh">GSI OpenSSH<a class="headerlink" href="#gsi-openssh" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fermicloud policy forbids running the GSI OpenSSH server.
+You will have to test that part locally.</p>
+</div>
 <p>To test a fresh installation:</p>
 <ol>
 <li>Spin up two VM's and set up the EPEL/OSG repos on both of them.</li>
-<li>Choose one of the VM's, it will be the server VM. Consult these <a href="https://opensciencegrid.github.io/docs/other/gsissh/">instructions</a> to set up the server.</li>
+<li>Choose one of the VM's, it will be the server VM. The hostname of this machine will be referenced below as the <code>&lt;SERVER HOSTNAME&gt;</code>
+    Consult these <a href="https://www.opensciencegrid.org/docs/other/gsissh/">instructions</a> to set up the server.</li>
 <li>
 <p>From the other VM (client):</p>
 <ol>
@@ -941,21 +2319,21 @@ KeepAlive On
 </li>
 <li>
 <p>Connect to the server:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsissh -p <span class="m">2222</span> <span style="color:red">&lt;server hostname&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsissh -p <span class="m">2222</span> &lt;SERVER HOSTNAME&gt;
 </pre></div>
 
 
 </li>
 <li>
 <p>Copy a test file to the server:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsiscp -p <span class="m">2222</span> testfile <span style="color:red">&lt;server hostname&gt;</span>:/tmp
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsiscp -p <span class="m">2222</span> testfile &lt;SERVER HOSTNAME&gt;:/tmp
 </pre></div>
 
 
 </li>
 <li>
 <p>Connect to the server via SFTP and grab files:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsisftp -P <span class="m">2222</span> <span style="color:red">&lt;server hostname&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsisftp -P <span class="m">2222</span> &lt;SERVER HOSTNAME&gt;
 <span class="gp">user@host $</span> <span class="nb">cd</span> /tmp
 <span class="gp">user@host $</span> get testfile
 </pre></div>
@@ -992,7 +2370,7 @@ KeepAlive On
 <li>
 <p>Configure your CE using osg-configure</p>
 <ol>
-<li>You should use the <a href="https://opensciencegrid.github.io/docs/compute-element/install-htcondor-ce/">HTCondor-CE Install Docs</a> as a reference, although you can skip several of the steps</li>
+<li>You should use the <a href="https://www.opensciencegrid.org/docs/compute-element/install-htcondor-ce/">HTCondor-CE Install Docs</a> as a reference, although you can skip several of the steps</li>
 <li>You can skip setting up Squid: set <code>enabled</code> to <code>True</code> and <code>location</code> to <code>UNAVAILABLE</code> in <code>01-squid.ini</code></li>
 <li>Set <code>htcondor_gateway_enabled</code> to <code>True</code> in <code>10-gateway.ini</code></li>
 <li>You probably don't need GUMS, but if you want it, use the Fermi GUMS server (set <code>gums_host</code> to <code>gums.fnal.gov</code> and <code>authorization_method</code> to <code>xacml</code> in 10-misc.ini)</li>
@@ -1033,7 +2411,7 @@ KeepAlive On
 <p>Testing a fresh installation:</p>
 <ol>
 <li>make sure the yum repositories required by OSG is installed on your host<ul>
-<li>rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.2/osg-3.2-el6-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.2/osg-3.2-el6-release-latest.rpm</a> OR rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.2/osg-3.2-el5-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.2/osg-3.2-el5-release-latest.rpm</a></li>
+<li>rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm</a> OR rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm</a></li>
 <li>also make sure epel repo is set up. </li>
 </ul>
 </li>
@@ -1119,56 +2497,9 @@ vo-client rpms installed and that your X.509 certificate is in your home directo
 VO that you have membership in, run the following <code>voms-proxy-init -voms [VO]</code> where <code>[VO]</code> is 
 the appropriate VO (e.g. osg, cms, etc.).  You should be able to generate a voms-proxy for that
 VO without errors.</p>
-<h3 id="testing-edg-mkgridmap">Testing <code>edg-mkgridmap</code><a class="headerlink" href="#testing-edg-mkgridmap" title="Permanent link">&para;</a></h3>
-<p>Log on to a system with <code>edg-mkgridmap</code> installed.  Make sure you have the correct vo-client rpms 
-installed (vo-client-edgmkgridmap).  Run <code>edg-mkgridmap</code> and check the log output for errors.<br />
-There will be some errors so compare your errors with the errors on previous vo-package tickets to
-make sure no new errors have appeared.</p>
-<h3 id="testing-gums">Testing GUMS<a class="headerlink" href="#testing-gums" title="Permanent link">&para;</a></h3>
-<p>Log on to a system with a working GUMS install.  Make sure that you have the correct vo-client 
-rpms (osg-gums-config) installed.  </p>
-<ol>
-<li>Make a backup of <code>/etc/gums/gums.config</code> </li>
-<li>Copy the mysql database information from <code>/etc/gums/gums.config</code> to <code>/etc/gums/gums.config.template</code></li>
-<li>Copy <code>/etc/gums/gums.config.template</code> to <code>/etc/gums/gums.config</code></li>
-<li>Start the <code>tomcat6</code> service </li>
-<li>Go to the GUMS interface (e.g. https://my.host:8443/gums)</li>
-<li>Go to the Update VO members page and click on the <code>update VO members</code> button</li>
-<li>Once completed, there will probably be some errors.</li>
-<li>Compare errors to errors on prior vo package update tickets and make sure no new errors have occurred. </li>
-</ol>
-<h2 id="voms-admin-server">VOMS Admin Server<a class="headerlink" href="#voms-admin-server" title="Permanent link">&para;</a></h2>
-<h3 id="install-and-configure-voms-admin-server">Install and configure voms-admin-server<a class="headerlink" href="#install-and-configure-voms-admin-server" title="Permanent link">&para;</a></h3>
-<p>Install and configure voms-admin-server with this <a href="../voms-install.sh">voms-install.sh</a> script, entering <code>osg-testing</code> when prompted for the <code>REPO</code> and your own e-mail address when prompted for <code>EMAIL_FROM</code>.</p>
-<h3 id="set-up-test_vo-and-add-yourself-as-an-admin">Set up TEST_VO and add yourself as an admin<a class="headerlink" href="#set-up-test_vo-and-add-yourself-as-an-admin" title="Permanent link">&para;</a></h3>
-<p>To add a test VO (named TEST_VO) and add yourself as an admin, use the following script, replacing the <code>USER_EMAIL</code>, <code>USER_CERT_SUBJECT</code>, and <code>USER_COMMON_NAME</code> variables with your own:</p>
-<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="nv">VO_NAME</span><span class="o">=</span><span class="s2">&quot;TEST_VO&quot;</span>
-<span class="nv">TOMCAT_PORT</span><span class="o">=</span><span class="s2">&quot;8443&quot;</span>
-<span class="nv">USER_EMAIL</span><span class="o">=</span><span class="s2">&quot;YOUR_EMAIL&quot;</span>
-<span class="nv">USER_CERT_SUBJECT</span><span class="o">=</span><span class="s2">&quot;YOUR CERT DN&quot;</span>
-<span class="nv">USER_CERT_ISSUER</span><span class="o">=</span><span class="s2">&quot;/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1&quot;</span>
-<span class="nv">USER_COMMON_NAME</span><span class="o">=</span><span class="s2">&quot;YOUR CERT CN&quot;</span>
-
-voms-admin --vo <span class="nv">$VO_NAME</span> --host <span class="nv">$HOSTNAME</span> --nousercert create-user <span class="se">\</span>
-    <span class="s2">&quot;</span><span class="nv">$USER_CERT_SUBJECT</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$USER_CERT_ISSUER</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$USER_COMMON_NAME</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$USER_EMAIL</span><span class="s2">&quot;</span>
-
-voms-admin --vo <span class="nv">$VO_NAME</span> --host <span class="nv">$HOSTNAME</span> --nousercert assign-role <span class="se">\</span>
-    /<span class="nv">$VO_NAME</span> VO-Admin <span class="s2">&quot;</span><span class="nv">$USER_CERT_SUBJECT</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$USER_CERT_ISSUER</span><span class="s2">&quot;</span>
-
-<span class="nb">echo</span> web ui: https://<span class="nv">$HOSTNAME</span>:<span class="nv">$TOMCAT_PORT</span>/voms/<span class="nv">$VO_NAME</span>
-</pre></div>
-
-
-<h3 id="testing-the-web-ui">Testing the web UI<a class="headerlink" href="#testing-the-web-ui" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Add/suspend/restore/delete a user (using your e-mail address for contact)</li>
-<li>Verify e-mail receipt of suspension message</li>
-</ol>
 <h2 id="xrootd-voms-testing">XRootD VOMS Testing<a class="headerlink" href="#xrootd-voms-testing" title="Permanent link">&para;</a></h2>
 <p>This section is intended for OSG Software/Release teams to gather information on testing vomsxrd/xrootd-voms-plugin package. Original plugin named <a href="http://gganis.github.io/vomsxrd/">vomsxrd</a>, similar to lcmaps that extracts information for authorization within xrootd of a proxy's voms extension.</p>
-<p>You need an <a href="https://opensciencegrid.github.io/docs/data/install-xrootd/">xrootd server installation</a></p>
+<p>You need an <a href="https://www.opensciencegrid.org/docs/data/xrootd/install-storage-element/">xrootd server installation</a></p>
 <p>In the xrootd server yum install the following packages:</p>
 <ul>
 <li>xrootd</li>
@@ -1216,66 +2547,99 @@ sec.protocol /usr/lib64 gsi -ca:1 -crl:3
 </pre></div>
 
 
-<h2 id="xrootd-plugins">XRootD Plugins<a class="headerlink" href="#xrootd-plugins" title="Permanent link">&para;</a></h2>
+<h2 id="hdfs">HDFS<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
 <h3 id="hadoop-name-node-installation">Hadoop name node installation<a class="headerlink" href="#hadoop-name-node-installation" title="Permanent link">&para;</a></h3>
 <p>Use the following script with option 1:</p>
-<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">set</span> -e
+<div class="codehilite"><pre><span></span>#!/bin/bash
+set -e
 
-<span class="k">select</span> NODETYPE in namenode datanode gridftp<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="nv">$NODETYPE</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">break</span>
-<span class="k">done</span>
-<span class="k">case</span> <span class="nv">$NODETYPE</span> in
-  namenode <span class="o">)</span> <span class="nv">NAMENODE</span><span class="o">=</span><span class="nv">$HOSTNAME</span> <span class="p">;;</span>
-         * <span class="o">)</span> <span class="nb">read</span> -p <span class="s1">&#39;hostname for NAMENODE? &#39;</span> NAMENODE <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="nb">echo</span> <span class="nv">NODETYPE</span><span class="o">=</span><span class="nv">$NODETYPE</span>
-<span class="nb">echo</span> <span class="nv">NAMENODE</span><span class="o">=</span><span class="nv">$NAMENODE</span>
-<span class="nb">read</span> -p <span class="s1">&#39;ok? [y/N] &#39;</span> ok
-<span class="k">case</span> <span class="nv">$ok</span> in
-  y*<span class="p">|</span>Y*<span class="o">)</span> <span class="p">;;</span>  <span class="c1"># ok</span>
-      *<span class="o">)</span> <span class="nb">exit</span> <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="c1">#yum install --enablerepo=osg-minefield osg-se-hadoop-$NODETYPE</span>
-yum install osg-se-hadoop-<span class="nv">$NODETYPE</span>
-<span class="k">case</span> <span class="nv">$NODETYPE</span> in
-  namenode<span class="p">|</span>datanode <span class="o">)</span>
-    mkdir -p /data/<span class="o">{</span>hadoop,scratch,checkpoint<span class="o">}</span>
+select NODETYPE in namenode datanode gridftp; do
+  [[ $NODETYPE ]] &amp;&amp; break
+done
+case $NODETYPE in
+  namenode ) NAMENODE=$HOSTNAME ;;
+         * ) read -p &#39;hostname for NAMENODE? &#39; NAMENODE ;;
+esac
+echo NODETYPE=$NODETYPE
+echo NAMENODE=$NAMENODE
+read -p &#39;ok? [y/N] &#39; ok
+case $ok in
+  y*|Y*) ;;  # ok
+      *) exit ;;
+esac
+#yum install --enablerepo=osg-minefield osg-se-hadoop-$NODETYPE
+yum install osg-se-hadoop-$NODETYPE
+case $NODETYPE in
+  namenode|datanode )
+    mkdir -p /data/{hadoop,scratch,checkpoint}
     chown -R hdfs:hdfs /data
-    sed -i s/NAMENODE/<span class="nv">$NAMENODE</span>/ /etc/hadoop/conf.osg/<span class="o">{</span>core,hdfs<span class="o">}</span>-site.xml
-    cp /etc/hadoop/conf.osg/<span class="o">{</span>core,hdfs<span class="o">}</span>-site.xml /etc/hadoop/conf/
+    sed -i s/NAMENODE/$NAMENODE/ /etc/hadoop/conf.osg/{core,hdfs}-site.xml
+    cp /etc/hadoop/conf.osg/{core,hdfs}-site.xml /etc/hadoop/conf/
     touch /etc/hosts_exclude
-    <span class="p">;;</span>
-  gridftp <span class="o">)</span>
+    ;;
+  gridftp )
     ln -snf conf.osg /etc/hadoop/conf
-    sed -i s/NAMENODE/<span class="nv">$NAMENODE</span>/ /etc/hadoop/conf.osg/<span class="o">{</span>core,hdfs<span class="o">}</span>-site.xml
-    <span class="nb">echo</span> <span class="s2">&quot;hadoop-fuse-dfs# /mnt/hadoop fuse server=</span><span class="nv">$NAMENODE</span><span class="s2">,port=9000,rdbuffer=131072,allow_other 0 0&quot;</span> &gt;&gt; /etc/fstab
+    sed -i s/NAMENODE/$NAMENODE/ /etc/hadoop/conf.osg/{core,hdfs}-site.xml
+    echo &quot;hadoop-fuse-dfs# /mnt/hadoop fuse server=$NAMENODE,port=9000,rdbuffer=131072,allow_other 0 0&quot; &gt;&gt; /etc/fstab
     mkdir /mnt/hadoop
     mount /mnt/hadoop
     cp -v /etc/redhat-release /mnt/hadoop/test-file
-    sed -i <span class="s1">&#39;/globus_mapping/s/^# *//&#39;</span> /etc/grid-security/gsi-authz.conf
+    sed -i &#39;/globus_mapping/s/^# *//&#39; /etc/grid-security/gsi-authz.conf
     sed -i s/yourgums.yourdomain/gums.fnal.gov/ /etc/lcmaps.db
     mkdir /mnt/hadoop/fnalgrid
     useradd fnalgrid -g fnalgrid
     chown fnalgrid:fnalgrid /mnt/hadoop/fnalgrid
     service globus-gridftp-server start
-    <span class="k">if</span> <span class="nb">type</span> -t globus-url-copy &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-      globus-url-copy file:////bin/bash  gsiftp://<span class="nv">$HOSTNAME</span>/mnt/hadoop/fnalgrid/first_test
-    <span class="k">else</span>
-      <span class="nb">echo</span> globus-url-copy not installed
-    <span class="k">fi</span>
-    <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="k">case</span> <span class="nv">$NODETYPE</span> in
-  namenode <span class="o">)</span> su - hdfs -c <span class="s2">&quot;hadoop namenode -format&quot;</span> <span class="p">;;</span>
-<span class="k">esac</span>
-service hadoop-hdfs-<span class="nv">$NODETYPE</span> start
+    if type -t globus-url-copy &gt;/dev/null; then
+      globus-url-copy file:////bin/bash  gsiftp://$HOSTNAME/mnt/hadoop/fnalgrid/first_test
+    else
+      echo globus-url-copy not installed
+    fi
+    ;;
+esac
+case $NODETYPE in
+  namenode ) su - hdfs -c &quot;hadoop namenode -format&quot; ;;
+esac
+service hadoop-hdfs-$NODETYPE start
 </pre></div>
 
 
+<h3 id="edit-configuration">Edit Configuration<a class="headerlink" href="#edit-configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Edit /etc/hadoop/conf/hdfs-site.xml<ul>
+<li>set dfs.replication to 1   </li>
+<li>set dfs.replication.min to 1</li>
+</ul>
+</li>
+</ol>
 <h3 id="hadoop-data-node-installation">Hadoop data node installation<a class="headerlink" href="#hadoop-data-node-installation" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Run same script as before but with option number 2.</li>
+</ol>
+<h3 id="gridftp-installation">GridFTP installation<a class="headerlink" href="#gridftp-installation" title="Permanent link">&para;</a></h3>
+<p>Run same as script but with option number 3.</p>
+<h3 id="on-the-name-node">On the name node<a class="headerlink" href="#on-the-name-node" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="gp">[root@fermicloud092 ~]#</span> hdfs dfs -ls /test-file
+<span class="go">Found 1 items</span>
+<span class="go">-rw-r--r--   2 root root          0 2014-07-21 15:57 /test-file</span>
+</pre></div>
+
+
+<h3 id="on-the-name-node_1">On the name node<a class="headerlink" href="#on-the-name-node_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="gp">[root@]#</span> hadoop fs -mkdir /matyas
+<span class="gp">[root@]#</span> hadoop fs -chown matyas /matyas
+<span class="gp">[root@]#</span> hdfs dfsadmin -setSpaceQuota 123k /matyas
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/tmp/blob <span class="nv">bs</span><span class="o">=</span><span class="m">4096</span> <span class="nv">count</span><span class="o">=</span><span class="m">10000</span>
+<span class="gp">user@host $</span> kx509<span class="p">;</span> voms-proxy-init -noregen -voms fermilab
+<span class="gp">user@host $</span> globus-url-copy -vb file:///tmp/blob gsiftp://<span class="sb">`</span>hostname -f<span class="sb">`</span>/mnt/hadoop/matyas
+</pre></div>
+
+
+<h2 id="xrootd-plugins">XRootD Plugins<a class="headerlink" href="#xrootd-plugins" title="Permanent link">&para;</a></h2>
+<ol>
 <li>
 <p>Install xrootd-server:</p>
 <div class="codehilite"><pre><span></span>yum install xrootd-server
@@ -1291,16 +2655,6 @@ service hadoop-hdfs-<span class="nv">$NODETYPE</span> start
 
 </li>
 </ol>
-<h3 id="gridftp-installation">GridFTP installation<a class="headerlink" href="#gridftp-installation" title="Permanent link">&para;</a></h3>
-<p>Run same as script but with option number.</p>
-<h3 id="on-the-name-node">On the name node<a class="headerlink" href="#on-the-name-node" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="gp">[root@fermicloud092 ~]#</span> hdfs dfs -ls /test-file
-<span class="go">Found 1 items</span>
-<span class="go">-rw-r--r--   2 root root          0 2014-07-21 15:57 /test-file</span>
-</pre></div>
-
-
-<p>This means your hadoop is working.</p>
 <p>Modify the file <code>/etc/xrootd/xrootd-clustered.cfg</code> to look like this:</p>
 <div class="codehilite"><pre><span></span>xrd.port 1094
 
@@ -1343,9 +2697,9 @@ oss.space default_stage /opt/xrootd_cache
 
 
 <p>Create file <code>/etc/xrootd/storage.xml</code> and place this:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;storage-mapping&gt;</span>
-<span class="nt">&lt;lfn-to-pfn</span> <span class="na">protocol=</span><span class="s">&quot;hadoop&quot;</span> <span class="na">destination-match=</span><span class="s">&quot;.*&quot;</span> <span class="na">path-match=</span><span class="s">&quot;.*/+tmp2/test-file&quot;</span> <span class="na">result=</span><span class="s">&quot;/test-file&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/storage-mapping&gt;</span>
+<div class="codehilite"><pre><span></span>&lt;storage-mapping&gt;
+&lt;lfn-to-pfn protocol=&quot;hadoop&quot; destination-match=&quot;.*&quot; path-match=&quot;.*/+tmp2/test-file&quot; result=&quot;/test-file&quot;/&gt;
+&lt;/storage-mapping&gt;
 </pre></div>
 
 
@@ -1357,55 +2711,84 @@ oss.space default_stage /opt/xrootd_cache
 
 
 <p>If it is sucessful it would have tested both cmstfc and hdfs plugins </p>
+                
+                  
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../policy/gums-retire/" class="btn btn-neutral float-right" title="GUMS Retirement">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../empty-pkgs/" class="btn btn-neutral" title="Empty Packages"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../empty-pkgs/" title="Empty Packages" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Empty Packages
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../policy/campus-cyberinfrastructure/" title="Campus Cyberinfrastructure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Campus Cyberinfrastructure
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
       
-          <a href="https://github.com/opensciencegrid/technology/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
       
+    
+    
       
-        <span><a href="../empty-pkgs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../policy/gums-retire/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
-
-</body>
+    
+  </body>
 </html>
