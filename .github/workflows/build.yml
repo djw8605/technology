@@ -18,11 +18,11 @@ jobs:
     - name: Verify Links
       uses: djw8605/linkchecker-action@master
       with:
-        site-dir: ./site
+        site-dir: ${{runner.workspace}}/site
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./site
+        PUBLISH_DIR: ${{runner.workspace}}/site
