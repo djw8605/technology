@@ -11,7 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - uses: djw8605/doc-ci-scripts@master
+    - name: Verify and Build
+      uses: djw8605/doc-ci-scripts@master
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
