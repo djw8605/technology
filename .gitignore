@@ -1,2 +1,6 @@
 *.pyc
 env/
+
+# Zensical build output and cache
+site/
+.cache/

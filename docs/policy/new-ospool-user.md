@@ -2,7 +2,7 @@
 Registering for a new Open Science Pool Account
 ===============================================
 
-The OSG access points at UW-Madison us the [COManage](https://www.internet2.edu/products-services/trust-identity/comanage/) identity management system
+The OSG access points at UW-Madison us the [COManage](https://incommon.org/trusted-access/comanage) identity management system
 to register new users.
 COManage uses the [InCommon federation](https://www.incommon.org/federation/), allowing users to register
 with their institutional identities; there is no "OSPool password" that users must memorize

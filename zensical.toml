@@ -1,0 +1,146 @@
+# Zensical configuration for the OSG Technology Area site.
+# Reference: https://zensical.org/docs/setup/basics/
+
+[project]
+site_name = "OSG Technology Area"
+site_url = "https://osg-htc.org/technology/"
+repo_url = "https://github.com/osg-htc/technology/"
+edit_uri = "edit/master/docs/"
+
+extra_css = ["css/extra.css"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "Software" = [
+    { "Packaging" = [
+      { "RPM Development Guide" = "software/rpm-development-guide.md" },
+      { "OSG Build Tools" = "software/osg-build-tools.md" },
+      { "Koji Workflow" = "software/koji-workflow.md" },
+      { "Creating the VO Client Package" = "software/create-vo-client.md" },
+      { "Container Development Guide" = "software/container-development-guide.md" },
+      { "Koji Mass Rebuilds" = "software/koji-mass-rebuilds.md" },
+    ] },
+    { "Development" = [
+      { "Development Process" = "software/development-process.md" },
+      { "Git Software Development Process" = "software/git-software-development.md" },
+      { "CE Scale Testing" = "software/ce-test-scaling.md" },
+      { "IPv6 Testing" = "software/ipv6-testing.md" },
+      { "How to Request Tokens" = "software/requesting-tokens.md" },
+    ] },
+    { "Technologies" = [
+      { "OSPool Containers" = "software/ospool-containers.md" },
+      { "GRACC MCP Server" = "software/gracc-mcp.md" },
+    ] },
+    { "Software Support" = "policy/software-support.md" },
+    { "Effort Tracking" = "software/effort-tracking.md" },
+    { "New Team Member" = "software/new-team-member.md" },
+    { "User Certificates" = "software/user-certs.md" },
+  ] },
+  { "Release" = [
+    { "How to Cut a Release" = "release/cut-sw-release.md" },
+    { "Ready for Testing Announcements" = "release/announce-rft-packages.md" },
+    { "New Release Series" = "release/new-release-series.md" },
+    { "New OS Series" = "release/new-os-series.md" },
+    { "Release Series End-of-Life" = "release/release-eol.md" },
+    { "ITB Prerelease Testing" = "release/itb-testing.md" },
+    { "Empty Packages" = "release/empty-pkgs.md" },
+  ] },
+  { "Operations" = [
+    { "COManage SOP" = "operations/comanage-sop.md" },
+    { "COManage Recipes" = "operations/comanage-recipes.md" },
+    { "COmanage Troubleshooting Guide" = "operations/comanage-troubleshooting-guide.md" },
+  ] },
+  { "Policy" = [
+    { "Campus Cyberinfrastructure" = "policy/campus-cyberinfrastructure.md" },
+    { "Collaborations and Bearer Tokens" = "policy/collab-bearer-tokens.md" },
+    { "OASIS Repository Mirroring" = "policy/external-oasis-repos.md" },
+    { "Flexible Release Model" = "policy/flexible-release-model.md" },
+    { "Software Release Policy" = "policy/software-release.md" },
+    { "Container Release Policy" = "policy/container-release.md" },
+    { "Community Testing" = "policy/community-testing.md" },
+    { "New OSPool User Registration" = "policy/new-ospool-user.md" },
+    { "Handling Topology/Contacts Registrations" = "policy/topology-registration.md" },
+  ] },
+  { "Documentation" = [
+    { "Writing Documentation" = "documentation/writing-documentation.md" },
+    { "Reviewing Documentation" = "documentation/reviewing-documentation.md" },
+    { "Markdown Style Guide" = "documentation/style-guide.md" },
+    { "Publishing OSG pages" = "documentation/publish-osg-pages.md" },
+  ] },
+  { "Historical Transitions" = [
+    { "Service Migrations - Spring 2018" = "policy/service-migrations-spring-2018.md" },
+    { "GUMS Retirement" = "policy/gums-retire.md" },
+    { "BeStMan2 Retirement" = "policy/bestman2-retire.md" },
+    { "VOMS Admin Retirement" = "policy/voms-admin-retire.md" },
+    { "SHA-2 Support" = "projects/sha2-support.md" },
+    { "Migrating Documents to Markdown" = "documentation/markdown-migration.md" },
+    { "CREAM-CE Support" = "policy/cream-support.md" },
+    { "Globus Toolkit Support" = "policy/globus-toolkit.md" },
+    { "GridFTP and GSI Migration" = "policy/gridftp-gsi-migration.md" },
+    { "Repo Layout Migration - Jan 2025" = "policy/repo-layout-migration-2025.md" },
+    { "Packaging SVN to Git Migration" = "policy/packaging-svn-to-git-migration.md" },
+  ] },
+  { "Meetings" = [
+    { "December 3, 2024" = "meetings/2024/TechArea20241203.md" },
+    { "November 5, 2024" = "meetings/2024/TechArea20241105.md" },
+    { "October 29, 2024" = "meetings/2024/TechArea20241029.md" },
+    { "October 15, 2024" = "meetings/2024/TechArea20241015.md" },
+    { "October 8, 2024" = "meetings/2024/TechArea20241008.md" },
+    { "October 1, 2024" = "meetings/2024/TechArea20241001.md" },
+    { "September 24, 2024" = "meetings/2024/TechArea20240924.md" },
+    { "September 3, 2024" = "meetings/2024/TechArea20240903.md" },
+    { "August 27, 2024" = "meetings/2024/TechArea20240827.md" },
+    { "August 20, 2024" = "meetings/2024/TechArea20240820.md" },
+    { "August 13, 2024" = "meetings/2024/TechArea20240813.md" },
+    { "August 6, 2024" = "meetings/2024/TechArea20240806.md" },
+    { "July 30, 2024" = "meetings/2024/TechArea20240730.md" },
+    { "July 23, 2024" = "meetings/2024/TechArea20240723.md" },
+    { "July 16, 2024" = "meetings/2024/TechArea20240716.md" },
+    { "July 2, 2024" = "meetings/2024/TechArea20240702.md" },
+    { "June 25, 2024" = "meetings/2024/TechArea20240625.md" },
+    { "June 18, 2024" = "meetings/2024/TechArea20240618.md" },
+    { "June 11, 2024" = "meetings/2024/TechArea20240611.md" },
+    { "May 28, 2024" = "meetings/2024/TechArea20240528.md" },
+    { "May 21, 2024" = "meetings/2024/TechArea20240521.md" },
+    { "May 14, 2024" = "meetings/2024/TechArea20240514.md" },
+    { "May 7, 2024" = "meetings/2024/TechArea20240507.md" },
+    { "April 30, 2024" = "meetings/2024/TechArea20240430.md" },
+    { "April 16, 2024" = "meetings/2024/TechArea20240416.md" },
+    { "April 9, 2024" = "meetings/2024/TechArea20240409.md" },
+    { "April 2, 2024" = "meetings/2024/TechArea20240402.md" },
+    { "March 19, 2024" = "meetings/2024/TechArea20240319.md" },
+    { "March 12, 2024" = "meetings/2024/TechArea20240312.md" },
+    { "March 5, 2024" = "meetings/2024/TechArea20240305.md" },
+    { "February 27, 2024" = "meetings/2024/TechArea20240227.md" },
+    { "February 20, 2024" = "meetings/2024/TechArea20240220.md" },
+    { "February 13, 2024" = "meetings/2024/TechArea20240213.md" },
+    { "February 6, 2024" = "meetings/2024/TechArea20240206.md" },
+    { "January 30, 2024" = "meetings/2024/TechArea20240130.md" },
+    { "January 23, 2024" = "meetings/2024/TechArea20240123.md" },
+    { "January 16, 2024" = "meetings/2024/TechArea20240116.md" },
+    { "January 9, 2024" = "meetings/2024/TechArea20240109.md" },
+    { "January 2, 2024" = "meetings/2024/TechArea20240102.md" },
+  ] },
+]
+
+[project.theme]
+# Match the Zensical theme used by the OSG site documentation
+# (https://github.com/osg-htc/docs).
+variant = "modern"
+custom_dir = "osgthedocs"
+favicon = "img/favicon.ico"
+features = [
+  "content.action.edit",
+  "navigation.sections",
+  "navigation.top",
+]
+
+[project.markdown_extensions]
+admonition = {}
+codehilite.guess_lang = false
+meta = {}
+toc.permalink = true
+
+[project.plugins.redirects.redirect_maps]
+"policy/comanage-instructions-user.md" = "https://osg-htc.org/docs/common/contact-registration"
+"policy/release-series.md" = "https://osg-htc.org/docs/release/release_series/"
