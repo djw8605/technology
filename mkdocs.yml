@@ -27,6 +27,7 @@ nav:
       - How to Request Tokens: 'software/requesting-tokens.md'
     - Technologies:
       - OSPool Containers: 'software/ospool-containers.md'
+      - GRACC MCP Server: 'software/gracc-mcp.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
     - New Team Member: 'software/new-team-member.md'
