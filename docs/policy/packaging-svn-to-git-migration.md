@@ -36,7 +36,7 @@ To do a non-scratch build, you must push your changes to the `main` branch of th
 Feel free to push directly to the `main` branch -- no need to make a pull request,
 unless you want your changes reviewed.
 
-The [development process page](../../software/development-process/) has been updated with
+The [development process page](../software/development-process.md) has been updated with
 these new instructions as well as some advice for keeping track of changes when building packages
 for multiple release series.
 

@@ -1,19 +1,22 @@
-name: Validate static MkDocs pages
+name: Validate static Zensical pages
 on: pull_request
 
 jobs:
-  validate-mkdocs:
+  validate-zensical:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Build MkDocs pages
-        uses: docker://squidfunk/mkdocs-material:7.1.0
-        timeout-minutes: 1
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
-          args: >-
-            build
-            --verbose
-            --strict
+          python-version: '3.13'
+
+      - name: Install Zensical
+        run: pip install -r requirements.txt
+
+      - name: Build Zensical pages
+        timeout-minutes: 2
+        run: zensical build --clean --strict
 
       - id: format-github-repo
         run: echo "repo-name=${GITHUB_REPOSITORY#*\/}" >> $GITHUB_OUTPUT
