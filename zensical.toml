@@ -123,13 +123,15 @@ nav = [
 ]
 
 [project.theme]
-# "classic" keeps the Material for MkDocs look that extra.css and the
-# templates in osgthedocs/ were written against.
-variant = "classic"
+# Match the Zensical theme used by the OSG site documentation
+# (https://github.com/osg-htc/docs).
+variant = "modern"
 custom_dir = "osgthedocs"
 favicon = "img/favicon.ico"
 features = [
   "content.action.edit",
+  "navigation.sections",
+  "navigation.top",
 ]
 
 [project.markdown_extensions]
